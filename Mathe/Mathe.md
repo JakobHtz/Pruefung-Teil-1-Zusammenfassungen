@@ -85,15 +85,15 @@ __Beispiel__:
 
 $234_{10} = ?_2$  
 $234:2=117\ Rest\ 0$  
-$117:2=58\ Rest\ 1$  
-$58:2=29\ Rest\ 0$  
-$29:2=14\ Rest\ 1$  
-$14:2=7\ Rest\ 0$  
-$7:2=3\ Rest\ 1$  
-$3:2=1\ Rest\ 1$  
-$1:2=0\ Rest\ 1$  
-$0:2=0\ Rest\ 0$  
-$0:2=0\ Rest\ 0$  
+$117:2=58\ \ \ Rest\ 1$  
+$58:2\ \ =29\ \ \ Rest\ 0$  
+$29:2\ \ =14\ \ \ Rest\ 1$  
+$14:2\ \ =7\ \ \ \ \ Rest\ 0$  
+$7:2\ \ \ \ =3\ \ \ \ \ Rest\ 1$  
+$3:2\ \ \ \ =1\ \ \ \ \ Rest\ 1$  
+$1:2\ \ \ \ =0\ \ \ \ \ Rest\ 1$  
+$0:2\ \ \ \ =0\ \ \ \ \ Rest\ 0$  
+$0:2\ \ \ \ =0\ \ \ \ \ Rest\ 0$  
 
 Wollen wir die Zahl jetzt in Schreibrichtung (Links nach Rechts) zusammensetzen, schreiben wir die Reste von der letzten Signifikanten Stelle von Unten nach Oben auf.  
 $=11101010_2$  
@@ -103,7 +103,7 @@ $=11101010_2$
 > So ergibt sich die Richtung also logisch.
 
 ## Subtraktionsverfahren
-Wenn wir eine Bezimalzahl in eine bestimmte Basis überführen wollen, können wir aber auch das Subtraktionsverfahren nutzen.  
+Wenn wir eine Dezimalzahl in eine bestimmte Basis überführen wollen, können wir aber auch das Subtraktionsverfahren nutzen.  
 Beim Subtraktionsverfahren ziehen wir jeweils die größt mögliche Potenz der gewählten Basis ab, die uns nicht ins negative bringt.  
 Wir notieren den Exponenten, um so die Stellen herauszufinden an denen in der Binär darstellung eine 1 stehen wird.  
 
@@ -118,13 +118,13 @@ $\sum_{i=n}^{0}{Zahl_{10} - 2^{i}}$
 __Beispiel__:  
 
 $234_{10}-2^{7}=234_{10}-128$ &#10003;  
-$106_{10}-2^{6}=234_{10}-64$ &#10003;  
-$42_{10}-2^{5}=234_{10}-32$ &#10003;  
-$10_{10}-2^{4}=234_{10}-16$ &#10007;  
-$10_{10}-2^{3}=234_{10}-8$ &#10003;  
-$2_{10}-2^{2}=234_{10}-4$ &#10007;  
-$2_{10}-2^{1}=234_{10}-2$ &#10003;  
-$0_{10}-2^{0}=234_{10}-1$ &#10007;  
+$106_{10}-2^{6}=234_{10}-64$ &nbsp;&nbsp;&#10003;  
+$42_{10}\ \ -2^{5}=234_{10}-32$ &nbsp;&nbsp;&#10003;  
+$10_{10}\ \ -2^{4}=234_{10}-16$ &nbsp;&nbsp;&#10007;  
+$10_{10}\ \ -2^{3}=234_{10}-8$ &nbsp;&nbsp;&nbsp;&nbsp;&#10003;  
+$2_{10}\ \ \ \ -2^{2}=234_{10}-4$ &nbsp;&nbsp;&nbsp;&nbsp;&#10007;  
+$2_{10}\ \ \ \ -2^{1}=234_{10}-2$ &nbsp;&nbsp;&nbsp;&nbsp;&#10003;  
+$0_{10}\ \ \ \ -2^{0}=234_{10}-1$ &nbsp;&nbsp;&nbsp;&nbsp;&#10007;  
 
 $=11101010_2$
 > Denk bei der Richtung an die Stellenwerte. 
