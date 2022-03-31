@@ -1,0 +1,60 @@
+# Themen (Sven)
+- Betriebswirtschaftslehre
+  - Projektstrukturplan
+  - Projektablaufplan 
+    - GANTT
+  - Projektmanagement
+  - Lagerkennziffern
+  - Bestellverfahren
+  - Optimale Bestellmenge
+  - ABC-Analyse
+  - Bindung an ein Angebot
+  - Quantitativer und qualitativer Angebotsverleich 
+    - Nutzwertanalyse
+  - Handelskalulation 
+    - Vorwärtskalkulation 
+    - Rückwärtskalkulation 
+    - Differenzkalkulation
+  - Netzplan
+  - Serviceanfragen
+    - Supportprozesse
+    - Ticketbearbeitung 
+    - Incident
+    - usw...
+  - Service-Level-Agreement
+  - Begriffsdefinitionen IT-Dienstleistungsvertrag
+- Wirtschaftskunde
+  - Besitz und Eiegntum
+  - Kaufvertrag
+  - Rechtsfähigkeit
+  - Geschäftsfähigkeit
+  - Rechtsgeschäfte
+    - Nichtigkeits- und Anfechtungsgründe
+  - Mängelarten
+- Hardwaretechnik
+  - Normen am Arbeitsplatz
+  - Ergonomie und Nachhaltigkeit am Arbeitsplatz
+- SQL
+  - Datenbanken
+  - Relationales Datenbankmodell
+  - Normalformen
+  - ER-Diagramm (Entity Relation)
+  - Relationsschreibweise
+- Datensicherheit
+  - Datenschutz
+  - Grundlagen Backups
+  - RAID (0,1,5,6)
+  - Verschlüsselung 
+  - Verschlüsselungsverfahren 
+- Mathe 
+  - Einheitentabelle zur Umrechnung 
+  - Zahlensysteme 
+    - Dual 
+    - Hex 
+    - Dezimal 
+  - Divisionsverfahren 
+  - Subtraktionsverfahren 
+  - BiBi-Formel 
+
+Fertig:
+- Netzwerke
