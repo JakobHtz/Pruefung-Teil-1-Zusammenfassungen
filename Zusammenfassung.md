@@ -23,6 +23,12 @@
     - usw...
   - Service-Level-Agreement
   - Begriffsdefinitionen IT-Dienstleistungsvertrag
+- Datensicherheit
+  - Datenschutz
+  - Grundlagen Backups
+  - RAID (0,1,5,6)
+  - Verschlüsselung 
+  - Verschlüsselungsverfahren 
 - Wirtschaftskunde
   - Besitz und Eiegntum
   - Kaufvertrag
@@ -34,27 +40,15 @@
 - Hardwaretechnik
   - Normen am Arbeitsplatz
   - Ergonomie und Nachhaltigkeit am Arbeitsplatz
+
 - SQL
   - Datenbanken
   - Relationales Datenbankmodell
   - Normalformen
   - ER-Diagramm (Entity Relation)
   - Relationsschreibweise
-- Datensicherheit
-  - Datenschutz
-  - Grundlagen Backups
-  - RAID (0,1,5,6)
-  - Verschlüsselung 
-  - Verschlüsselungsverfahren 
-- Mathe 
-  - Einheitentabelle zur Umrechnung 
-  - Zahlensysteme 
-    - Dual 
-    - Hex 
-    - Dezimal 
-  - Divisionsverfahren 
-  - Subtraktionsverfahren 
-  - BiBi-Formel 
+- Struktogramme
 
 Fertig:
 - Netzwerke
+- Mathe
