@@ -66,7 +66,7 @@ So können Binärzahlen spielend ohne irgendeine Rechnung umgeschrieben werden.
 
 __Beispiel__:  
 $11010001_2 = D1_{16} = 209_{10}$  
-Dabei wird die Dualzahl von Links nach Rechts in Vierergrüppchen aufgeteilt (zb. 1101.0001) und diese Vierergrüppchen einzeln umgerechnet (also $1101_2 = D_{16}$ und $0001_2 -> 1_{16}$).  
+Dabei wird die Dualzahl von Links nach Rechts in Vierergrüppchen aufgeteilt (zb. 1101.0001) und diese Vierergrüppchen einzeln umgerechnet (also $1101_2 = D_{16}$ und $0001_2$ -> $1_{16}$).  
 Dies Funktioniert da die Basen Potenzen von einander sind.  
 Beides sind Zweierpotenzen.  
 > Das funktioniert auch mit Oktal (der Basis 8) und Dreiergrüppchen von Binärzahlen. Die Begründung bleibt die Selbe.
