@@ -3,7 +3,7 @@ Relationale Datenbanken basieren auf Relationen, die in diesem Kontext als mathe
 Sie basieren also auf Tabellen. 
 
 ## Normalformen
-Um sinnvoll in einer Datenbank verwendet zu werden, sollten die Tabellen gewissen Standards einsprechen. 
+Um sinnvoll in einer Datenbank verwendet zu werden, sollten die Tabellen gewissen Standards entsprechen. 
 ### Erste Normalform
 Ein Relationstyp (Tabelle) befindet sich in der ersten Normalform (1NF), wenn die Wertebereiche der Attribute des Relationstypen atomar sind.  
 D.h., dass die Werte der Felder untrennbar sein sollten. So sollten wir Ort und PLZ trennen oder auch Name und Vorname.  
@@ -45,13 +45,13 @@ __Beispiel__:
 > \*Vorläufer Tabelle siehe Beispiel erste Normalform
 
 Film-Tabelle:
-FID | Filmname | Land | Jahr  
+<u>FID</u> | Filmname | Land | Jahr  
 --- | --- | --- | ---
 1 | Das Schweigen der Lämmer | USA | 1991
 2 | Noah | USA | 2014
 
 Darsteller-Tabelle:
-FID | Vorname | Name
+<span style=" border-bottom: 1px dotted;">FID</span> | Vorname | Name
 --- | --- | ---
 1 | Jodie | Foster
 1 | Anthony | Hopkins
@@ -61,7 +61,8 @@ FID | Vorname | Name
 2 | Emma | Watson
 
 __Probleme__:  
-Dies entfernt zwar die Redundaz der Film-Tabelle, aber nicht die der Darsteller-Tabelle.
+Dies entfernt zwar die Redundaz der Film-Tabelle, aber nicht die der Darsteller-Tabelle.  
+Das Selbe gilt für das Ändern und Löschen von Daten.
 
 ### Dritte Normalform
 Ein Relationstyp befindet sich genau dann in der dritten Normalform (3NF), wenn er sich in der zweiten Normalform (2NF) befindet und kein Nichtschlüsselattribut transitiv von einem Kandidatenschlüssel abhängt.  
@@ -73,13 +74,13 @@ __Beispiel__:
 > \*Vorläufer Tabellen siehe Beispiel zweite Normalform
 
 Film-Tabelle:
-FID | Filmname | Land | Jahr  
+<u>FID</u> | Filmname | Land | Jahr  
 --- | --- | --- | ---
 1 | Das Schweigen der Lämmer | USA | 1991
 2 | Noah | USA | 2014
 
 Darsteller-Tabelle:
-DID | Vorname  | Name
+<u>DID</u> | Vorname  | Name
 --- | --- | ---
 0 | Jodie | Foster
 1 | Anthony | Hopkins
@@ -88,7 +89,7 @@ DID | Vorname  | Name
 4 | Emma | Watson
 
 Zuordnungstabelle:  
-ZID | FID | DID 
+<u>ZID</u> | <span style=" border-bottom: 1px dotted;">FID</span> | <span style=" border-bottom: 1px dotted;">DID</span> 
 --- | --- | ---
 0 | 1 | 0 | 
 1 | 1 | 1 | 
@@ -97,12 +98,39 @@ ZID | FID | DID
 4 | 2 | 1 | 
 5 | 2 | 4 | 
 
-# Entity-Relationship-Modell 
-Bild mit Erklärung
+__Probleme__:  
+Die Probleme sind größten Teils für unsere Tabellen gelöst.  
+Es gibt weitere Normalformen, von denen wir aber nichts wissen müssen. Also behandeln wir diese jetzt einfach nicht.  
 
-# Reltionen Schreibweise
-Relationen
+# Entity-Relationship-Modell und Relationen
+![](./ER-Diagram.png)
+## Relationenschreibweise 
+Entität(<u>Primärschlüssel</u>, <span style=" border-bottom: 1px dotted;">Sekundärschlüssel</span>, Name, Vorname, usw)  
 
 # SQL
-Zwei 3 Befehle 
-(Kommt aber eh nicht dran, denk ich)
+> Kommt denke ich mal eh nicht dran, aber von mir aus.  
+
+## Befehle
+SELECT * FROM \<Tabelle\>  
+SELECT \<Spalte\>[,\<Spalte\>,...] FROM \<Tabelle\>  
+SELECT \<Spalte\> AS \<Neuer Name\> FROM \<Tabelle\>  
+SELECT \<Spalte\> FROM \<Tabelle\> ORDER BY \<Spalte\> [DESC | ASC]  
+SELECT \<Spalte\> FROM \<Tabelle\> WHERE \<Bedingung\>  
+>  Vergleichsoperatoren: = , \<\> , \> , \< , \>= , \<=  
+> Leere Einträge: IS [NOT] NULL  
+> Logische Operatoren: AND, OR, NOT  
+> Weitere: 
+> - LIKE 'WERT' ('_' Für ein beliebiges Zeichen, '%' Für Viele) 
+> - BETWEEN ... AND ... 
+> - [NOT] IN ('WERT1','WERT2',...)
+
+## Aggregatfunktionen 
+- SUM()
+- AVG()
+- COUNT()
+- MAX()
+- MIN()
+> Machen jeweils was man schon vermuten könnte. lol
+
+## Gruppen 
+SELECT \<Spalte\> FROM \<Tabelle\> GROUP BY \<Spalte\> [HAVING \<Aggregatfunktion\> \<Vergleichsoperator\> \<Wert\>]
