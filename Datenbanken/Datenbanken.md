@@ -133,4 +133,4 @@ SELECT \<Spalte\> FROM \<Tabelle\> WHERE \<Bedingung\>
 > Machen jeweils was man schon vermuten könnte. lol
 
 ## Gruppen 
-SELECT \<Spalte\> FROM \<Tabelle\> GROUP BY \<Spalte\> [HAVING \<Aggregatfunktion\> \<Vergleichsoperator\> \<Wert\>]
+SELECT \<Spalte\>, \<Aggregatfunktion\> FROM \<Tabelle\> GROUP BY \<Spalte\> [HAVING \<Aggregatfunktion\> \<Vergleichsoperator\> \<Wert\>]
