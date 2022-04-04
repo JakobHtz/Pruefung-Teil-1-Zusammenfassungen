@@ -37,7 +37,25 @@
     - Betriebsysteme 
     - Programmiersprachen
 # Debugging (Fehlersuche)
+- Überwachen von Variablen während der Laufzeit.  
+- Loggen von Errormessages mit Stack Trace.  
+- Breakpoints setzen.
+- Schrittweises Durchlaufen des Codes.
+- Isolieren verschiedener Funktionalitäten und unabhängiges Testing.
+- Unit Tests.
+
 # Refactoring 
+Umgestaltung/ "Aufräumen" eines bereits funktionalen (meist veralteten) Codes nach folgenden Punkten:
+
+- Lesbarkeit
+- Übersichtlichkeit
+- Verständlichkeit
+- Erweiterbarkeit
+- Vermeidung von Redundanz
+- Testbarkeit
+- Änderungen am Programmierstil bzw. den Coding Conventions
+
+Möglichkeiten: Auslagern, Zusammenfassen ähnlicher Funktionen, Beseitigen von totem Code, Umbenennen von Variablen, Methoden, Objekten, usw...
 # Algorithmus
 Von Wikipedia (passt schon so)
 
