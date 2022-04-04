@@ -1,5 +1,41 @@
 # Einordnung von Programmiersprachen
-# Softwareprozessentwicklung
+- Java/C#
+  - Für Alles
+  - Objektorientiert 
+  - Wir in Bytecode vorcompiliert
+    - Wird während der Laufzeit Interpretiert
+    - Läuft auf jeden Betriebssystem, das eine kompatible Runtime environment (Laufzeitumgebung) hat
+- JavaScript
+  - Für das Internet
+  - Läuft im Browser
+  - Meist Client-seitig 
+- PHP
+  - Für das Internet
+  - Läuft Server-seitig
+- CSS
+  - Styling für HTML-Seiten
+  - Stylesheet
+- HTML
+  - Für das Internet 
+  - Markup Language
+- XML
+  - Für Infromationen 
+    - zb. Konfiguration
+  - Post HTTP-Requests 
+- Bash
+  - Linux Terminal
+  - Skripte
+- Assembler
+  - Maschinen-nahe Programmierung
+    - Gerätetreiber
+    - Zeitkritisches 
+- C
+  - Maschinen-nahe Programmierung
+    - Nicht so nah wie Assembler
+    - Gerätetreiber
+    - Microcontroller
+    - Betriebsysteme 
+    - Programmiersprachen
 # Debugging (Fehlersuche)
 # Refactoring 
 # Algorithmus
@@ -127,4 +163,5 @@ main(args: string[]) {
 }
 ```
 # Struktogramme und UML
-Siehe Formelsammlung, die ich in Discord geschickt hab'.
+Siehe Formelsammlung, die ich in Discord geschickt hab'.  
+Raum #dateien
