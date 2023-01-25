@@ -25,11 +25,11 @@ $Datengeschwindigkeit = \frac{Datenmenge}{Zeit}$
 # IPv4 
 ## Aufbau   
 Besteht aus 4 Oktetten.  
-Wird in Dotted Dezimal notiert, also werden die Werte der 4 Oktette in Dezimalschreibweise und durch Punkte getrennt aufgeschrieben (zb. 255.255.255.255).  
+Wird in Dotted Dezimal notiert, also werden die Werte der 4 Oktette in Dezimalschreibweise und durch Punkte getrennt aufgeschrieben (zb. `255.255.255.255`).  
 ## Private Adressbereiche  
-- 10.0.0.0 bis 10.255.255.255  
-- 172.16.0.0 bis 172.31.255.255  
-- 192.168.0.0 bis 192.168.255.255  
+- `10.0.0.0` bis `10.255.255.255`  
+- `172.16.0.0` bis `172.31.255.255`  
+- `192.168.0.0` bis `192.168.255.255`  
 
 # IPv6  
 ## Aufbau
@@ -39,26 +39,26 @@ Dabei sind:
 - max. 16 Bits für Subnetze reserviert. 
 - genau 64 Bits als "Interface Identifier" (Hostbereich) reserviert.
 
-Eine IPv6-Adresse setzt sich aus 8 Hextetten zusammen (zb 2001:bd8:1234:1e25:4567:e3f2:ff34:267b).  
+Eine IPv6-Adresse setzt sich aus 8 Hextetten zusammen (zb `2001:bd8:1234:1e25:4567:e3f2:ff34:267b`).  
 Dabei werden die ersten 4 Hextette als (Provider-)Präfix bezeichnet, die letzten 4 sind der Hostbereich, der sogenannte Interface Identifier.  
 Das Letzte Hextett des Präfix (also das 4.) wird auch für Subnetzte verwendet.  
 
 ### Vereinfachen 
 
 - Vorangehende Nullen dürfen weggelassen werden
-  - 0016 → 16
+  - `0016` → `16`
 - Hextette, die nur aus Nullen bestehen können mit :: einmalig zusammengefasst werden.
-  - 2001:abc:123:0000:1:0000:0000:0000 → 2001:abc:123:0:1:: 
+  - `2001:abc:123:0000:1:0000:0000:0000` → `2001:abc:123:0:1::` 
 
 ### Adresstypen
 
-__Global Unicast__ (weltweit einmalig): von überall erreichbar z.B. 2001:db6:eff1:: 
+__Global Unicast__ (weltweit einmalig): von überall erreichbar z.B. `2001:db6:eff1::` 
 
-__Link Local__ (nur intern nutzbar/ kann aus der MAC-Adresse gebildet werden) z.B. startet immer mit fe80 
+__Link Local__ (nur intern nutzbar/ kann aus der MAC-Adresse gebildet werden) z.B. startet immer mit `fe80` 
 
-__Multicast-Adressen__: es wird nur ein bestimmter Adressbereich angesprochen z.B. starten immer mit ff (ff01-locale Interface/ ff02- link local unicast) 
+__Multicast-Adressen__: es wird nur ein bestimmter Adressbereich angesprochen z.B. starten immer mit `ff` (`ff01`-locale Interface/ `ff02`- link local unicast) 
 
-__Unique-local__ (dient zum Austausch innerhalb des Firmennetzwerks) ist der Bereich fc00::/7 – fdff::/8 
+__Unique-local__ (dient zum Austausch innerhalb des Firmennetzwerks) ist der Bereich `fc00::/7` – `fdff::/8` 
 
 # IP-Adressvergabe 
 ## IPv4 
@@ -73,11 +73,11 @@ Entweder manuell oder dynamisch mit DHCPv6/ MAC-Adresse
 Ablauf:
 - Host sendet Multicast an alle Router (Router-Solicitation)
   - Bittet um Präfix für globale IPv6-Adresse
-  - ff02::2 (Multicast-Adresse)
+  - `ff02::2` (Multicast-Adresse)
 - Router antwortet (Router-Advertisement) 
   - Antwortet mit globalem Präfix für Netzwerk
 - Host sendet Multicast an alle DHCPv6-Server (DHCP-Solicitation)
-  - ff02::1:2 (Multicast an alle DHCPv6-Server)
+  - `ff02::1:2` (Multicast an alle DHCPv6-Server)
 - DHCP antwortet (Router-Advertisement)
   - Alle Daten zum Verfolständigen der Adresskonfiguration
 - Host Konfiguriert Adresse und frägt DHCP an (DHCPv6-Request)
@@ -93,7 +93,7 @@ Ablauf:
 - Befindet sich auf NIC-Karte (Network Interface Controller)
 - Pysische Adresse 
 
-Bsp: 12:d4:f7:98:56 
+Bsp: `12:d4:f7:98:56` 
 
 # Switching  
 ![](./assets/IP-Paket_Switch.png)  
@@ -150,11 +150,11 @@ Gebäudeverkabelung mit
 # Subnetting  
 ## IPv4
 Eine IPv4 Adresse besteht aus Netzanteil und Hostanteil.  
-Ist ein Netz mit Subnetzmaske gegeben (zb. in CIDR Schreibweise 192.168.0.0/16), so können wir 4 Informationen daraus ziehen:
-1. Die Netzwerk-Adresse lautet 192.168.0.0
-2. Die Subnetzmaske lautet 255.255.0.0 (/16)
-3. Der Netzanteil sind die ersten 2 Oktette (192.168)
-4. Folglich sind die letzten 2 Oktette der Hostanteil (0.0) 
+Ist ein Netz mit Subnetzmaske gegeben (zb. in CIDR Schreibweise `192.168.0.0/16`), so können wir 4 Informationen daraus ziehen:
+1. Die Netzwerk-Adresse lautet `192.168.0.0`
+2. Die Subnetzmaske lautet `255.255.0.0` (`/16`)
+3. Der Netzanteil sind die ersten 2 Oktette (`192.168`)
+4. Folglich sind die letzten 2 Oktette der Hostanteil (`0.0`) 
 
 Wird nun gefordert das Netz in 3 Subnetze aufzuteilen, so müssen wir den Netzanteil erweitern.  
 Die Anzahl der benötigten Bits kommt auf die Menge der Subnetze an.  
@@ -167,15 +167,15 @@ $2^{2 Bits} = 4\ Mögliche\ Subnetze >= 3\ Geforderte\ Subnetze$
 
 Da sich der Netzanteil nun vergrößert hat, müssen wir natürlich auch die Subnetzmaske um diese 2 Bits erweitern. 
 
-In CIDR Schreibweise: 192.168.0.0/18  
-Oder auch Binär: 255.255.192.0
+In CIDR Schreibweise: `192.168.0.0/18`  
+Oder auch Binär: `255.255.192.0`
 
 Subnetze | Netzadresse (binär) | Netzadresse (dotted dezimal) | Subnetzmaske
 --- | --- | --- | ---
-1 | 11000000.10101000.__00__ 000000.00000000 | 192.168.0.0 | /18
-2 | 11000000.10101000.__01__ 000000.00000000 | 192.168.64.0 | /18
-3 | 11000000.10101000.__10__ 000000.00000000 | 192.168.128.0 | /18
-4 | 11000000.10101000.__11__ 000000.00000000 | 192.168.192.0 | /18
+1 | 11000000.10101000.__00__ 000000.00000000 | `192.168.0.0` | `/18`
+2 | 11000000.10101000.__01__ 000000.00000000 | `192.168.64.0` | `/18`
+3 | 11000000.10101000.__10__ 000000.00000000 | `192.168.128.0` | `/18`
+4 | 11000000.10101000.__11__ 000000.00000000 | `192.168.192.0` | `/18`
 
 > Die für die Subnetze erweiterten Bits sind __FETT__ gedruckt.
 
@@ -196,7 +196,7 @@ $Broadcast = Netzadresse(n+1) - 1$
 Wir gehen prinzipiell Ähnlich vor wie beim Subnetting mit gleich großen Subnetzen, aber müssen auf ein paar zusätliche Dinge achten.  
 Erklärung anhand eines Beispiels.  
 __Beispiel__:  
-172.26.10.0/24  
+`172.26.10.0/24`  
 Teile das Netz in 4 Subnetze, die jeweils die gegebene Anzahl an Hostadressen besitzen. 
 - 31 Hostadressen | $2^{6Bits} = 64 Adressen$ | $/32 - 6Bits = /26$
 > Hier müssen wir berücksichtigen, dass in dieser Rechnung jeweils die Netzadresse und Braodcast-Adresse vom möglichen Hostbereich abgezogen werden müssen.  
@@ -209,46 +209,46 @@ Teile das Netz in 4 Subnetze, die jeweils die gegebene Anzahl an Hostadressen be
 
 Subnetze | Netzadresse (binär) | Netzadresse (dotted dezimal) | Subnetzmaske
 --- | --- | --- | ---
-1 | __10101100.00011010.00001010.00__ 000000 | 172.26.10.0 | /26
-2 | __10101100.00011010.00001010.010__ 00000 | 172.26.10.64 | /27
-3 | __10101100.00011010.00001010.100__ 00000 | 172.26.10.128 | /27
-4 | __10101100.00011010.00001010.1100__ 0000 | 172.26.10.192 | /28
+1 | __10101100.00011010.00001010.00__ 000000 | `172.26.10.0` | `/26`
+2 | __10101100.00011010.00001010.010__ 00000 | `172.26.10.64` | `/27`
+3 | __10101100.00011010.00001010.100__ 00000 | `172.26.10.128` | `/27`
+4 | __10101100.00011010.00001010.1100__ 0000 | `172.26.10.192` | `/28`
 > Die komplette Netzadresse ist __FETT__ gedruckt. Der Rest ist folglich der Hostanteil.
 
 ## IPv6
 Beim Subnetting mit einer IPv6-Adresse betrachten wir nur das 4. Hextett, da dieses für das Subnetting reserviert ist.  
 Hier wird dann wieder ähnlich vorgegangen wie beim Subnetting mit IPv4.  
 __Beispiel (Saß)__:  
-2001:db8:3fe::/48  
+`2001:db8:3fe::/48`  
 Gefordert sind 7 Subnetze.  
 Dafür benötigen wir 3 Bits ($2^{3Bits}=8$).  
 Da der Netzwerkanteil erweitert wird, müssen wir nun auch die Subnetzmaske anpassen: $/48 + 3 = /51$
 Subnetze | 4. Hextett (binär) | Netzadresse | Subnetzmaske
 --- | --- | --- | ---
-1 | 0000.0000.0000.0000 | 2001:db8:3fe:: | /51
-2 | 0010.0000.0000.0000 | 2001:db8:3fe:2000:: | /51
-3 | 0100.0000.0000.0000 | 2001:db8:3fe:4000:: | /51
-4 | 0110.0000.0000.0000 | 2001:db8:3fe:6000:: | /51
-5 | 1000.0000.0000.0000 | 2001:db8:3fe:8000:: | /51
-6 | 1010.0000.0000.0000 | 2001:db8:3fe:A000:: | /51
-7 | 1100.0000.0000.0000 | 2001:db8:3fe:C000:: | /51
+1 | 0000.0000.0000.0000 | `2001:db8:3fe::` | `/51`
+2 | 0010.0000.0000.0000 | `2001:db8:3fe:2000::` | `/51`
+3 | 0100.0000.0000.0000 | `2001:db8:3fe:4000::` | `/51`
+4 | 0110.0000.0000.0000 | `2001:db8:3fe:6000::` | `/51`
+5 | 1000.0000.0000.0000 | `2001:db8:3fe:8000::` | `/51`
+6 | 1010.0000.0000.0000 | `2001:db8:3fe:A000::` | `/51`
+7 | 1100.0000.0000.0000 | `2001:db8:3fe:C000::` | `/51`
 > Das Vierte Hextett wird ganz normal von Binär zu Hexadezimal umgerechnet.  
 > Teilt man es in Vierer Grüppchen auf, muss jedes Grüppchen nur einzln "umgerechnet" werden. Das ersparrt uns einiges an Rechenarbeit :).
 
 __Beispiel (Sven)__:  
-2001:db8:3fe::/48  
+`2001:db8:3fe::/48`  
 Gefordert sind 7 Subnetze.  
 Dafür benötigen wir 3 Bits ($2^{3Bits}=8$).  
-Da das komplette 4. Hextett für das Subnetting definiert ist, können wir auch das ganze 4. Hextett dafür nutzen. Also benutzen wir einfach die Subnetzmaske /64.
+Da das komplette 4. Hextett für das Subnetting definiert ist, können wir auch das ganze 4. Hextett dafür nutzen. Also benutzen wir einfach die Subnetzmaske `/64`.
 Subnetze | 4. Hextett (binär) | Netzadresse | Subnetzmaske
 --- | --- | --- | ---
-1 | 0000.0000.0000.0000 | 2001:db8:3fe:: | /64
-2 | 0000.0000.0000.0001 | 2001:db8:3fe:1:: | /64
-3 | 0000.0000.0000.0010 | 2001:db8:3fe:2:: | /64
-4 | 0000.0000.0000.0011 | 2001:db8:3fe:3:: | /64
-5 | 0000.0000.0000.0100 | 2001:db8:3fe:4:: | /64
-6 | 0000.0000.0000.0101 | 2001:db8:3fe:5:: | /64
-7 | 0000.0000.0000.0110 | 2001:db8:3fe:6:: | /64
+1 | 0000.0000.0000.0000 | `2001:db8:3fe::` | `/64`
+2 | 0000.0000.0000.0001 | `2001:db8:3fe:1::` | `/64`
+3 | 0000.0000.0000.0010 | `2001:db8:3fe:2::` | `/64`
+4 | 0000.0000.0000.0011 | `2001:db8:3fe:3::` | `/64`
+5 | 0000.0000.0000.0100 | `2001:db8:3fe:4::` | `/64`
+6 | 0000.0000.0000.0101 | `2001:db8:3fe:5::` | `/64`
+7 | 0000.0000.0000.0110 | `2001:db8:3fe:6::` | `/64`
 
 # Statisches Routing  
 Vorteile | Nachteile 
